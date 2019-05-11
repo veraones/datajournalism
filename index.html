@@ -1,714 +1,153 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <title>数说中国航空安全发展历程</title>
-    <!-- 引入 echarts.js -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>数说中国航空安全发展历程</title>
 	<script src="echarts.js"></script>
 	<script src="map/js/world.js"></script>
-    <script src="data_line.js"></script>
-    
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-        
-        body,
-        html {
-            height: 100%;
-        }
-        
-        body,
-        html {
-            font-family: "Microsoft YaHei", "微软雅黑", Candara, Tahoma, SimSun !important;
-            font-size: 16px;
-            background: #fff;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            text-align: left;
-            color: #1a1a1a;
-            font-weight: 400;
-        }
-    </style>
-    <style>
-        .top {
-            width: 1366px;
-            height:50px;
-        }
-        
-        .word {
-            width: 1000px;
-            height: auto;
-            text-align: left;
-            text-align: justify;
-            margin: 50px auto;
-            font-size: 16px;
-        }
-        
-        .container {
-            width: 1200px;
-            height: auto;
-        }
-        
-        .box1 {
-            width: 800px;
-            height: auto;
-            margin: 10px;
-            border: 10px;
-        }
-        
-        .word1 {
-            width: 800px;
-            height: auto;
-            text-align: left;
-            font-size: 16px;
-        }
-        
-        .box2 {
-            width: 800px;
-            height: auto;
-            margin: 10px;
-            border: 10px;
-        }
-        
-        .laiyuan {
-            width: 550px;
-            height: auto;
-            font-size: 10px;
-            text-align: center;
-        }
-        
-        .guodu2 {
-            width: 1366px;
-            height: auto;
-            text-align: center;
-            font-size: 20px;
-            margin-top: 20px;
-        }
-    </style>
-    <style type="text/css">
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-    </style>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 </head>
-
 <body>
-    <div class="top" ></div>
-    <h1  align="center">数说中国航空安全发展历程</h1>
-    <center>
-        <div class="word">
-            <p style="font-size:16px">据不完全统计，从1月中旬伊朗发生坠机事件至今，在不到5个月时间里，全世界造成伤亡的民航事故已经多达9起。
-                其中最为严重的当属3月10日埃塞俄比亚航空302号班机坠毁事故，该起事故造成机上157人全部罹难。
-                埃航飞机失事尚未超过20小时，我国民航局就率先下达了停飞波音737-8飞机的通知，随后全球多个国家和地区也纷纷下达禁飞令。
-                我国政府此番举动不仅是对致命的坠机事件的回应、对乘客生命安全的负责，也彰显了我国在航空界不断上升的影响力。
-            </p>
-            <p>&nbsp;</p>
-            <p style="font-size:16px">我国政府早于FAA（美国联邦航空管理局）发布停飞波音737-8指令，体现出当前我国对飞行安全的追求已经走在了FAA的前面。
-                而近年来国内航空也几乎没有人员伤亡的报道，似乎也说明了乘坐国内航空公司出行比国际航空更安全。
-                我们希望从飞行事故记录的角度，结合对某些时间节点的实际情况的探讨，尽可能展现多年来我国航空安全的发展历程，并从中分析当前国内航空的飞行安全水平。          
-            </p>
-            <p>&nbsp;</p>
-            <h2 style="height:20px; text-align:center;"><b>--大众对于飞行安全的忧虑与看法--</b></h2>
-            <p>&nbsp;</p>         
-            <p style="font-size:16px">为了了解当前大众对于飞行安全的忧虑和看法，我们进行了简单的一次问卷调查，调查结果显示：
-                    在对航空事故的感知来说，认为航空事故没什么变化的受访者和认为航空事故点多的受访者数相同。但对于航空事故，受访者总体持悲观情绪，只有一成受访者认为自己可以在航空事故中生还。
-                    而对于发生过航空事故的航空公司及飞机机型，7成受访者表示有“一朝被蛇咬，十年怕草绳”的态度，会选择避开该航空公司和飞机机型。
-                    最后，受访者普遍认为机器故障是航空事故发生的最大诱因，再依次是天气、恐袭、机组人员失误。
-                    这小范围的调查有一定的参考性，受访者的对航空安全的态度低迷，每次飞行前或多或少都会担心安全问题，仿佛每次飞行都是一次生命赌博。
-            </p>
-            <p>&nbsp;</p>
-        </div>
-    </center>
+	<div class="container">
+		<div class="content">
+			<div class="mockup-browser">
+				<section class="mockup-section paint-area">
+					<div class="mockup-content mockup-grid">
+						<div class="mockup-grid__item mockup-width--half">
+							<h1 class="mockup-heading mockup-heading--large paint-area paint-area--text">数说中国航空安全发展历程<span class="mockup-heading__subline">——以航空事故记录的角度</span></h3>
+							<button class="mockup-button paint-area"><span>Discover more</span> <i class="fa fa-chevron-right"></i></button>
+						</div>
+						<figure class="mockup-grid__item mockup-width--half">
+							<div class="mockup-img mockup-img--large">
+								<i class="fa fa-picture-o"></i>
+							</div>
+						</figure>
+					</div><!-- /mockup-grid -->
+				</section>
 
-    <section>
-        <h2 style="height:20px; text-align:center;"><b>--近百年来我国航空飞行事故记录--</b></h2>
-        <center>
-            <div class="container">
-                <div class="box1">
-                    <div style="height:20px; font-size:16px; text-align:center;margin-top:10px;"><b>中国大陆近百年以来发生的航空事故数与遇难人数</b></div>
-                    <img src="pic1.png" width="800px" /> 
-                            <div class="laiyuan"> 数据来源:2013-2017《中国人口和就业统计年鉴》、《中国统计年鉴》 采集时间：2013-2017年</div>
-                    
-                </div>
-            </div>
-            
-        </center>
-        <center>
-            <div class="word">
-                <p style="font-size:16px">由图示，我们可以发现我国航空事故有两个高峰期，分别是40年代喝90年代。40年代的中国处于战乱中，不安全的局势增加了航空危险。而90年代是民航开始自主运营的重要事件段，加之国际形势动荡，让90年代的航空安全事故频发。
-                    值得关注的是21世纪以来，我国航空事故明显下降了很多，有几年甚至无航空事故发生，我国航空事业的发展十分亮眼。
-                </p>
-        </div>
-        </center>
-        
+				<section class="mockup-section--dark paint-area">
+					<div class="mockup-content">
+						<blockquote class="mockup-blockquote">
+							<p class="paint-area paint-area--text">自今年一月份以来，全世界造成人员伤亡的民航事故已经多达9起，3月10号的埃航空难更是致使机组157人全部遇难。
+								埃航飞机失事尚未超过20小时，我国民航局就率先下达了停飞波音737-8飞机的通知，随后全球多个国家和地区也纷纷下达禁飞令。
+								<br>
+								<br>
+								政府早于FAA（美国联邦航空管理局）发布停飞波音737-8指令，体现出当前我国对飞行安全的追求已经走在了FAA的前面。而近年来国内航空也几乎没有人员伤亡的报道，似乎也说明了乘坐国内航空公司出行比国际航空更安全。
+								我们希望从飞行事故记录的角度，结合对某些时间节点的实际情况的探讨，尽可能展现多年来国内航空安全的发展历程。
+							</p>
+							<p></p>
+						</blockquote>
+					</div><!-- /mockup-grid -->
+				</section>
 
 
+				<section class="mockup-section mockup-section paint-area">
+					<div class="mockup-content mockup-grid">
+						<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">近百年来我国航空飞行事故记录</h2>
+						<figure class="mockup-grid__item mockup-width--third">
+							<div id="pic1",style="width: 400px; height: 100px;" class="mockup-img"></div>
+							<figcaption class="mockup-caption mockup-caption--box paint-area">
+								<h3 class="paint-area paint-area--text">中国大陆1922年-2018年发生的航空事故数与伤亡人数</h3>
+								<p class="paint-area paint-area--text">由图示，我们可以发现我国航空事故有两个高峰期，分别是40年代喝90年代。40年代的中国处于战乱中，不安全的局势增加了航空危险。而90年代是民航开始自主运营的重要事件段，加之国际形势动荡，让90年代的航空安全事故频发。 值得关注的是21世纪以来，我国航空事故明显下降了很多，有几年甚至无航空事故发生，我国航空事业的发展十分亮眼。</p>
+							</figcaption>
+						</figure>
+						<br>
+							<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text"><br>百年事故记录具体情况</h2>
+							<figure class="mockup-grid__item mockup-width--half">
+								<div id="pic2.1",style="width: 400px; height:300px;" class="mockup-img"></div>
+								<figcaption style="height: 250px;"class="mockup-caption mockup-caption--box paint-area">
+									<h3 class="paint-area paint-area--text">乘客生还率统计</h3>
+									<p class="paint-area paint-area--text">航空事故固然可怕，但不是每一个航空事故都会造成人员伤亡的。 根据数据显示，有59.7%的航空事故是没有人伤亡的，全员遇难的航空事故占全部事故的12%，发送航空事故的生还率较高。 当发生航空事故时，乘客不要慌张，听从机组人员指挥，增加生还率。</p>
+								</figcaption>
+							</figure>
+							<figure class="mockup-grid__item mockup-width--half">
+								<div id="pic2.2",style="width: 400px; height: 300px;" class="mockup-img"></div>
+								<figcaption style="height: 250px;" class="mockup-caption mockup-caption--box paint-area">
+									<h3 class="paint-area paint-area--text">发生事故次数最多的机型排名Top8</h3>
+									<p class="paint-area paint-area--text">而在发生事故前8名飞机机型中，波音737占据榜首。事故次数的多寡仅供参考，不能说明该机型的故障率最高。</p>
+								</figcaption>
+							</figure>												
 
-        <center>
-                <h2 style="height:20px; text-align:center;"><b>--国内航空事故的具体情况--</b></h2>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-            <div class="container">
-                <div class="box1">
-                    <div style="height:20px; font-size:16px; text-align:center;margin-top:10px;"><b>造成人员伤亡的空难中乘客生还率统计</b></div>
-                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-                    <div id="main4" style="width: 710px; height: 500px; margin: auto; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" ></div>
+					</div><!-- /mockup-grid -->
+				
+				</section>
 
-                    <script>
-                        var dom = document.getElementById("main4");
-                        var myChart = echarts.init(dom);
-                        var app = {};
-                        option = {
-                            title : {
-                                //text: '空难中乘客生还率统计',
-                                subtext: '*** 公式说明 ： 乘客生还率 = 乘客死亡人数 / 航班乘客总人数 ***',
-                                x:'center'
-                            },
-                            tooltip : {
-                                trigger: 'item',
-                                formatter: "{a} <br/>{b} : {c} ({d}%)"
-                            },
-                            legend: {
-                                orient: 'vertical',
-                                left: 'left',
-                                data: ['100%生还率','99%--50%生还率','49%--1%生还率','0%生还率','无记录']
-                            },
-                            series : [
-                                {
-                                    name: '所有空难事故中',
-                                    type: 'pie',
-                                    radius : ['40%', '65%'],
-                                    center: ['50%', '60%'],
-                                    
-                                    data:[
-                                        {value:129, name:'100%生还率'},
-                                        {value:13, name:'99%--50%生还率'},
-                                        {value:14, name:'49%--1%生还率'},
-                                        {value:27, name:'0%生还率'},
-                                        {value:33, name:'无记录'}
-                                    ],
-                                    itemStyle: {
-                                        emphasis: {
-                                            shadowBlur: 10,
-                                            shadowOffsetX: 0,
-                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
-                                        }
-                                    }
-                                }
-                            ]
-                        };
-                        ;
-                        if (option && typeof option === "object") {
-                            myChart.setOption(option, true);
-                        }
-                        </script>
-                    <div class="laiyuan"> 数据来源：asn飞行安全网
-                    </div>
-                    <p>&nbsp;</p>
-                </div>
+				<section class="mockup-section mockup-section--dark paint-area">
+					<div class="mockup-content mockup-grid">
+						<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">世界各国航空事故数统计</h2>
+						<figure class="mockup-grid__item mockup-width--75">
+							<div id="worldmap",style="width: 500px; height: 400px;" class="mockup-img mockup-img--large"></div>
+						</figure>
+						<div class="mockup-grid__item mockup-width--forth">
+							<p class="paint-area paint-area--text">从1919年起，世界范围内有记录的飞行事故共两万余起，事故发生最多的国家是美国和俄罗斯。</p>
+							<button class="mockup-button paint-area"><span>Read more</span> <i class="fa fa-chevron-right"></i></button>
+						</div>
+						<figure class="mockup-grid__item mockup-width--third">
+								<div id="pic3.2",style="width: 400px; height: 100px;" class="mockup-img"></div>
+								<figcaption class="mockup-caption mockup-caption--box paint-area">
+									<h3 class="paint-area paint-area--text">每万架次航班事故率（1976年-2016年）</h3>
+									<p class="paint-area paint-area--text">从图中看出，93年有个事故高峰期（原因是劫机事件频发）。步入21世纪，来我国严格把控飞行安全。从2006年起，没万架次航班事故率已降至0.1一下，事故数少于国际水平。</p>
+								</figcaption>
+						</figure>
+					</div><!-- /mockup-grid -->
+				</section>
 
-            </div>
-        </center>
-        <center>
-                <div class="word">
-                    <p style="font-size:16px">航空事故固然可怕，但不是每一个航空事故都会造成人员伤亡的。
-                                根据数据显示，有59.7%的航空事故是没有人伤亡的，全员遇难的航空事故占全部事故的12%，发送航空事故的生还率较高。
-                                当发生航空事故时，乘客不要慌张，听从机组人员指挥，增加生还率。
-                    </p>
-            </div>
-        </center>
+				<section class="mockup-section mockup-section--dark paint-area">
+					<div class="mockup-content mockup-grid">
+						<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">结语</h2>
+						<figure class="mockup-grid__item mockup-width--half">
+							<div class="mockup-img mockup-img--large"><i class="fa fa-picture-o"></i></div>
+						</figure>
+						<div class="mockup-grid__item mockup-width--half">
+							<p class="paint-area paint-area--text">航空事故固然让人谈虎色变，但我国每天约有2千4百万乘客在天上飞，发生事故的比例特别小。
+									再者从我国航空事故数据中可以看出，我国民航的安全指数较高，国内乘客可以安心的乘坐国内航空公司的航班。																									
+									如若遇到航空事故，乘客也要听从机组人员的安排，增加自身生还率。</p>
+							<button class="mockup-button paint-area"><span>Read more</span> <i class="fa fa-chevron-right"></i></button>
+						</div>
+					</div><!-- /mockup-grid -->
+				</section>
 
-        <center>
-            <div class="container">
-                <div class="box1">
-                    <div style="height:28px; font-size:20px; text-align:center;margin-top:10px;"><b>事故次数————机型排名</b></div>
-                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-                    <div id="main5" style="width: 710px; height: 500px; margin: auto; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" ></div>
+				<section class="mockup-section mockup-section--dark paint-area">
+					<div class="mockup-content mockup-grid">
+						<figure class="mockup-grid__item mockup-width--third">
+							<div class="mockup-pricing paint-area">
+								<h3 class="mockup-heading mockup-heading--box paint-area"><span>数据来源</span></h3>
+								<div class="mockup-bigtext"><span class="paint-area paint-area--text">
+										ASN : https://aviation-safety.net
+									<br>世界银行 ：https://data.worldbank.org
+										</span></div>
+								<div class="mockup-list-wrap paint-area">
+									<ul class="mockup-list paint-area paint-area--text">
+										<li>指导老师：杨洸 汪翩翩</li>
+										<li>组员：XXX XXX XXX </li>
+									</ul>
+								</div>
+							</div>
+						</figure>
+					</div>
+				</section>
+			</div><!-- /mockup-browser -->
+		</div><!-- /content -->
 
-                    <script>
-                        var dom = document.getElementById("main5");
-                        var myChart = echarts.init(dom);
-                        var app = {};
-                        option = null;
-                            var chartData = [10, 7, 7, 7, 6, 6, 6, 5];
-                            var chartName = ['Boeing 737', 'Douglas C-47-DL (DC-3)', 'Douglas C-53 (DC-3)', 'Hawker Siddeley HS-121 Trident 2E', 'Curtiss C-46', 'DC-9-82 (MD-82)', 'Junkers Ju-52/3m', "Ilyushin Il-14"];
-                            // var unit='亿元';
-                            var myColor = ['#FFA483', '#F97F53', '#F45922'];
-                            option = {
-                                //  title: {
-                                //     text: '单位:  '+unit,
-                                //     right:0,
-                                //     textStyle: {
-                                //         color: '#000',
-                                //         fontSize:14,
-                                //     }
-                                // },
+	</div><!-- /container -->
+	<script src="pic1.js"></script>
+	<script src="pic2_1.js"></script>
+	<script src="pic2_2.js"></script>
+	<script src="pic3_2.js"></script>
+	<script src="worldmap.js"></script>
+	<script>
 
-                                backgroundColor: '#fff',
-                                title: {
-                                    //text: "事故次数————机型排名",
-                                    subtext: "***数字描述的是多年空难中该机型发生事故的次数***",
-                                    textStyle: {
-                                        color: "#F45922",
-                                        fontSize: 26
-                                    },
-                                    subtextStyle: {
-                                        color: "#6F6F6F",
-                                        fontSize: 11
-                                    },
-                                    left: 'center',
-                                    top: "3%"
-                                },
-                                grid: {
-                                    left: '2%',
-                                    right: '10%',
-                                    bottom: '1%',
-                                    //top: '10%',
-                                    containLabel: true
-                                },
-                                xAxis: [{
-                                        show: false,
-                                    },
-                                    {
-                                        show: false,
-                                    }
-                                ],
-                                yAxis: {
-                                    type: 'category',
-                                    inverse: true,
-                                    show: false
-                                },
-
-                                series: [
-
-                                    //亮色条 百分比
-                                    {
-                                        show: true,
-                                        type: 'bar',
-                                        barGap: '-100%',
-                                        barWidth: '20%',
-                                        z: 2,
-                                        itemStyle: {
-                                            normal: {
-                                                color: function(params) {
-                                                    var num = myColor.length;
-                                                    return myColor[params.dataIndex % num]
-                                                }
-                                            }
-                                        },
-                                        label: {
-                                            normal: {
-                                                show: true,
-                                                textStyle: {
-                                                    color: '#444444',
-                                                    fontSize: 25,
-                                                    fontWeight: 'bold'
-                                                },
-                                                position: 'right',
-                                                formatter: function(data) {
-                                                    return (' ' + chartData[data.dataIndex]) + ' times';
-                                                }
-                                            }
-                                        },
-                                        data: chartData,
-                                    },
-                                    //年份
-                                    {
-                                        show: true,
-                                        type: 'bar',
-                                        xAxisIndex: 1, //代表使用第二个X轴刻度
-                                        barGap: '-100%',
-                                        barWidth: '10%',
-                                        itemStyle: {
-                                            normal: {
-                                                barBorderRadius: 200,
-                                                color: 'transparent'
-                                            }
-                                        },
-                                        label: {
-                                            normal: {
-                                                show: true,
-                                                position: [0, '-20'],
-                                                textStyle: {
-                                                    fontSize: 14,
-                                                    color: '#333',
-                                                },
-                                                formatter: function(data) {
-                                                    return chartName[data.dataIndex];
-                                                }
-                                            }
-                                        },
-                                        data: chartData
-                                    }
-                                ]
-                            };;
-                            if (option && typeof option === "object") {
-                                myChart.setOption(option, true);
-                            }
-                        </script>
-                    <div class="laiyuan"> 数据来源：asn飞行安全网
-                    </div>
-                    <p>&nbsp;</p>
-                </div>
-
-            </div>
-        </center>
-        <center>
-                <div class="word">
-                    <p style="font-size:16px">而在发生事故前8名飞机机型中，波音737依旧占据榜首。
-                    </p>
-            </div>
-        </center>
-        
-        <center>
-            <div class="container">
-                <div class="box1">
-                    <div style="height:28px; font-size:20px; text-align:center;margin-top:10px;"><b>发生事故次数最多的航空公司TOP 10</b></div>
-                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-                    <div id="main6" style="width: 900px; height: 500px; margin: auto; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" ></div>
-
-                    <script>
-                        var dom = document.getElementById("main6");
-                        var myChart = echarts.init(dom);
-                        var app = {};
-                        option = {
-                                //backgroundColor: '#0e2147',
-                                grid: {
-                                    left: '11%',
-                                    top: '12%',
-                                    right: '0%',
-                                    bottom: '8%',
-                                    containLabel: true
-                                },
-                                xAxis: [{
-                                    show: false,
-                                }],
-                                yAxis: [{
-                                    axisTick: 'none',
-                                    axisLine: 'none',
-                                    offset: '27',
-                                    axisLabel: {
-                                        textStyle: {
-                                            color: '#0e2147',
-                                            fontSize: '16',
-                                        }
-                                    },
-                                    data: ['海南航空','中国西北航空', '中国西南航空','中国北方航空','中国南方航空','中国国航','中国东方航空','厦门航空','中国民用航空局','中国航空集团']
-                                }, {
-                                    axisTick: 'none',
-                                    axisLine: 'none',
-                                    axisLabel: {
-                                        textStyle: {
-                                            color: '#0e2147',
-                                            fontSize: '16',
-                                        }
-                                    },
-                                    data: ['10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
-                                }, {
-                                   // name: '发生事故次数最多的航空公司TOP 10',
-                                    nameGap: '50',
-                                    nameTextStyle: {
-                                        //color: '#ffffff',
-                                        fontSize: '16',
-                                    },
-                                    axisLine: {
-                                        lineStyle: {
-                                            color: 'rgba(0,0,0,0)'
-                                        }
-                                    },
-                                    data: [],
-                                }],
-                                series: [{
-                                        name: '条',
-                                        type: 'bar',
-                                        yAxisIndex: 0,
-                                        data: [2, 3, 5, 5, 7, 9, 10, 11, 26, 71],
-                                        label: {
-                                            normal: {
-                                                show: true,
-                                                position: 'right',
-                                                textStyle: {
-                                                    color: '#0e2147',
-                                                    fontSize: '16',
-                                                }
-                                            }
-                                        },
-                                        barWidth: 12,
-                                        itemStyle: {
-                                            normal: {
-                                                color: function(params) {
-                                                    var num = myColor.length;
-                                                    return myColor[params.dataIndex % num]
-                                                },
-                                            }
-                                        },
-                                        z: 2
-                                    }, {
-                                        name: '白框',
-                                        type: 'bar',
-                                        yAxisIndex: 1,
-                                        barGap: '-100%',
-                                        data: [74, 74, 74, 74,74,74,74,74,74,74],
-                                        barWidth: 20,
-                                        itemStyle: {
-                                            normal: {
-                                                color: '#0e2147',
-                                                barBorderRadius: 5,
-                                            }
-                                        },
-                                        z: 1
-                                    }, {
-                                        name: '外框',
-                                        type: 'bar',
-                                        yAxisIndex: 2,
-                                        barGap: '-100%',
-                                        data: [75, 75, 75, 75, 75, 75, 75, 75, 75, 75],
-                                        barWidth: 24,
-                                        itemStyle: {
-                                            normal: {
-                                                color: function(params) {
-                                                    var num = myColor.length;
-                                                    return myColor[params.dataIndex % num]
-                                                },
-                                                barBorderRadius: 5,
-                                            }
-                                        },
-                                        z: 0
-                                    },
-                                    {
-                                        name: '外圆',
-                                        type: 'scatter',
-                                        hoverAnimation: false,
-                                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                        yAxisIndex: 2,
-                                        symbolSize: 35,
-                                        itemStyle: {
-                                            normal: {
-                                                color: function(params) {
-                                                    var num = myColor.length;
-                                                    return myColor[params.dataIndex % num]
-                                                },
-                                                opacity: 1,
-                                            }
-                                        },
-                                        z: 2
-                                    }
-                                ]
-                            };
-
-                            myChart.setOption(option);
-                    </script>
-                </div>
-
-            </div>
-        </center>
-        <center>
-                <div class="word">
-                    <p style="font-size:16px">而相信不少乘客在面对五花八门的航空公司时，会不知道挑选哪家航空公司较好，通过一下数据，我们可以直观的看到发生航空事故次数前10名的航空公司，
-                    </p>
-            </div>
-        </center> 
-
-        <center>
-                <div class="container">
-                    <div class="box1">
-                        <div style="height:28px; font-size:20px; text-align:center;margin-top:10px;"><b>每万架次航班事故率（1976-2016）</b></div>
-                        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-                        <div id="main7" style="width: 900px; height: 500px; margin: auto; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;" ></div>
-    
-                        <script type="text/javascript">
-                            var dom = document.getElementById("main7");
-                            var myChart = echarts.init(dom);
-                            var time = [
-                            ["1976","0.361 ","0.227 "],
-                            ["1977","0.347 ","0.286 "],
-                            ["1978","0.294 ","0.252 "],
-                            ["1979","0.159 ","0.242 "],
-                            ["1980","0.196 ","0.234 "],
-                            ["1981","0.175 ","0.210 "],
-                            ["1982","0.430 ","0.210 "],
-                            ["1983","0.405 ","0.217 "],
-                            ["1984","0.108 ","0.180 "],
-                            ["1985","0.196 ","0.182 "],
-                            ["1986","0.078 ","0.159 "],
-                            ["1987","0.063 ","0.185 "],
-                            ["1988","0.226 ","0.158 "],
-                            ["1989","0.188 ","0.184 "],
-                            ["1990","0.255 ","0.171 "],
-                            ["1991","0.053 ","0.166 "],
-                            ["1992","0.200 ","0.172 "],
-                            ["1993","0.650 ","0.170 "],
-                            ["1994","0.184 ","0.144 "],
-                            ["1995","0.025 ","0.139 "],
-                            ["1996","0.061 ","0.125 "],
-                            ["1997","0.085 ","0.119 "],
-                            ["1998","0.039 ","0.116 "],
-                            ["1999","0.091 ","0.114 "],
-                            ["2000","0.052 ","0.097 "],
-                            ["2001","0.024 ","0.101 "],
-                            ["2002","0.075 ","0.106 "],
-                            ["2003","0.032 ","0.101 "],
-                            ["2004","0.017 ","0.086 "],
-                            ["2005","0.007 ","0.090 "],
-                            ["2006","0.013 ","0.090 "],
-                            ["2007","0.006 ","0.086 "],
-                            ["2008","0.011 ","0.083 "],
-                            ["2009","0.005 ","0.077 "],
-                            ["2010","0.004 ","0.062 "],
-                            ["2011","0.008 ","0.060 "],
-                            ["2012","0.004 ","0.054 "],
-                            ["2013","0.010 ","0.065 "],
-                            ["2014","0.003 ","0.068 "],
-                            ["2015","0.006 ","0.064 "],
-                            ["2016","0.003 ","0.057 "],
-                            ["2017","0.002 ","0.049 "],
-                            
-                            ]
-                            var app = {};
-                            option = {
-                                    title: {
-                                        //text: '每万架次航班事故率（1976-2016）',
-                                        subtext: '数据来源于asn与世界银行数据库',
-                                        x: 'left'
-                                    },
-                                    tooltip: {
-                                        trigger: 'axis'
-                                    },
-                                    legend: {
-                                        data:['中国大陆','世界'],
-                                        x: 'right'
-                                    },
-                                    xAxis: {
-                                        data: time.map(function (item) {
-                                            return item[0];
-                                        }),
-                                    },
-                                    yAxis: {
-                                        splitLine: {
-                                            show: false,
-                                        },
-                                        min:0
-                                    },
-                                    toolbox: {
-                                        left: 'center',
-                                        feature: {
-                                            dataZoom: {
-                                                yAxisIndex: 'none'
-                                            },
-                                            restore: {},
-                                            saveAsImage: {}
-                                        }
-                                    },
-                                    dataZoom: [{
-                                        startValue: '2014-06-01'
-                                    }, {
-                                        type: 'inside'
-                                    }],
-                                    /*visualMap: {
-                                        top: 10,
-                                        right: 10,
-                                        pieces: [
-                                        {
-                                            gt: 0,
-                                            lte: 0.1,
-                                            color: '#096'
-                                        },{
-                                            gt: 0.1,
-                                            lte: 0.7,
-                                            color: '#ff9933'
-                                        }]
-                                    },*/
-                                    series: [
-                                        {
-                                        name: '中国大陆',
-                                        type: 'line',
-                                        color: '#096',
-                                        data: time.map(function (item) {
-                                            return item[1];
-                                        }),
-                                        markLine: {
-                                            silent: true,
-                                            data: [ {
-                                                yAxis: 0.1
-                                            },  {
-                                                yAxis: 0.2
-                                            },{
-                                                yAxis: 0.3
-                                            }, {
-                                                yAxis: 0.4
-                                            }, {
-                                                yAxis: 0.5
-                                            },{
-                                                yAxis: 0.6
-                                            }, {
-                                                yAxis: 0.7
-                                            }]
-                                        },
-                                        large:true
-                                    },
-                                    {
-                                        name: '世界',
-                                        type: 'line',
-                                        color: '#ff9933',
-                                        data: time.map(function (item) {
-                                            return item[2];
-                                        }),
-                                        large:true
-                                    },
-                                
-                                ]
-                                };
-                            if (option && typeof option === "object") {
-                                myChart.setOption(option, true);
-                            }
-                        </script>
-                    </div>
-    
-                </div>
-            </center>
-            <center>
-                    <div class="word">
-                        <p style="font-size:16px">为何93年有个高峰期（劫机事件频发），步入21世纪，来我国严格把控飞行安全。下列图表可以看出，从2006年起，没万架次航班事故率已降至0.1一下，事故数远少于国际水平。
-                        </p>
-                </div>
-            </center> 
-        
-        
-        
-        
-        
-        
-        
-        <center>
-            <div class="word">
-                <p style="font-size:16px">
-                        航空事故固然让人谈虎色变，但我国每天约有2千4百万乘客在天上飞，发生事故的比例特别小。
-                </p>
-                <p>&nbsp;</p>
-                <p style="font-size:16px">
-                        再者从我国航空事故数据中可以看出，我国民航的安全指数较高，国内乘客可以安心的乘坐国内航空公司的航班。
-                </p>
-                <p>&nbsp;</p>
-                <p style="font-size:16px">
-                        如若遇到航空事故，乘客也要听从机组人员的安排，增加自身生还率。
-                </p>
-            </div>
-        </center>
-
-        <center>
-            <div class="guodu2 " style="background-color:rgb(100, 93, 93) ">
-                <p>&nbsp;</p>
-                <p><span style="font-size:15px ;color:rgb(241, 236, 236);">指导老师：杨洸、汪翩翩</span></p>
-                <p><span style="font-size:15px ;color:rgb(241, 236, 236);">数据来源：ASN飞行安全网<br>世界银行</span></p>
-                <p>&nbsp;</p>
-            </div>
-        </center>
-
-
-</section></body></html>
+			window.addEventListener("resize", function () {
+			myChart1.resize();
+			myChart2_1.resize();
+			myChart2_2.resize();
+			myChart_map.resize();
+			myChart3_2.resize();
+			
+		});
+	</script>
+</body>
+</html>
