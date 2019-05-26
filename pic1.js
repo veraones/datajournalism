@@ -70,6 +70,7 @@ var time = [
 ]
 var app = {};
 option = {
+    backgroundColor: '#f7f7f7',
         title: {
             text: '',
             x: 'left'
@@ -107,11 +108,12 @@ option = {
             }
         }
     ],
-        dataZoom: [{
-            startValue: '2014-06-01'
-        }, {
-            type: 'inside'
-        }],
+    dataZoom: [{
+            startValue: '1942',
+            endValue:'1996'
+    }, {
+        type: 'inside'
+    }],
         series: [
         {
             name:'航空事故数',
@@ -119,17 +121,31 @@ option = {
             data: time.map(function (item) {
 				return item[1];
             }),
-            color:'#5FA1E0'
+            color:'#e3c4a8',
+            //symbol:'star',//拐点样式
+            symbolSize: 8,//拐点大小
+            smooth:0.3,
+            lineStyle:{
+                width:4//设置线条粗细
+            }
         },
         {
-            name:'总伤亡人数',
-            type:'bar',
+            name: '总伤亡人数',
+            type: 'bar',
             yAxisIndex: 1,
             data: time.map(function (item) {
 				return item[2];
 			}),
-            color:'#535353'
-        } 
+            itemStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[
+                    {offset: 0, color: '#4592af'},
+                    {offset: 1, color: '#33313b'}
+                    ])
+                }
+            },
+            large:true
+        }
     ]
     };;
     myChart1.setOption(option);

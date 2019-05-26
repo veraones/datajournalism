@@ -5,7 +5,7 @@ var app = {};
 option = null;
 
     option = {
-        backgroundColor:'#d9eaf7',
+        backgroundColor:'#ffebd3',
         title: {
             //text: '各国发生航空事故数量统计 (1919.08.11-2019.04.24)',
             subtext: '1919.08.11-2019.04.24',
@@ -27,7 +27,7 @@ option = null;
             min: 1,
             max: 1000,
             inRange: {
-                color:['#d874eb', '#6b54e4']
+                color:['#4592af', '#33313b']
                 //color:['lightskyblue','#fee090', 'orangered']
                 //color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
             },
@@ -41,6 +41,8 @@ option = null;
                 type: 'map',
                 roam: true,
                 map: 'world',
+                zoom:3.5,
+                center: [100, 30],
                 itemStyle:{
                     
                     emphasis:{label:{show:true}}
@@ -49,6 +51,7 @@ option = null;
                 textFixed: {
                     Alaska: [20, -20]
                 },
+
                 data:[
                     {"name":"United States of America","value":"3993"},
                     {"name":"Russia","value":"1232"},

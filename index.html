@@ -6,6 +6,7 @@
 	<meta name="viewport" content="user-scalable=0">
 	<title>数说中国航空安全发展历程</title>
 	<script src="echarts.js"></script>
+	<script src="jquery-3.4.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 </head>
@@ -38,7 +39,9 @@
 								<br>
 								<br>
 								政府早于FAA（美国联邦航空管理局）发布停飞波音737-8指令，体现出当前我国对飞行安全的追求已经走在了FAA的前面。而近年来国内航空也几乎没有人员伤亡的报道，似乎也说明了乘坐国内航空公司出行比国际航空更安全。
-								于是我们从飞行安全网站ASN收集一系列详细的关于飞机失事的记录,希望从飞行事故记录的角度，结合对某些时间节点的实际情况的探讨，尽可能展现多年来国内航空安全的发展历程。
+								我们从飞行安全网站ASN收集一系列详细的数据，其中包含了民用、通用、军用航空的记录。
+								我们希望从航空事故记录的角度，结合对某些时间节点的实际情况的探讨，尽可能展现多年来国内航空安全的发展历程。
+								需要说明的是，本文中飞行事故并不完全等同于空难，一些出现征候但没有造成严重后果的事件也在我们的探讨范围内。
 							</p>
 							<p></p>
 						</blockquote>
@@ -47,112 +50,174 @@
 
 
 				<section class="mockup-section mockup-section paint-area">
+						<div class="mockup-content mockup-grid">
+								<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">
+									1919年以来发生在世界各国的飞行事故
+								</h2>
+								<figure class="mockup-grid__item mockup-width--75">
+									<div id="worldmap", style="height: 320px" class="mockup-img mockup-img--large"></div>
+								</figure>
+								<div class="mockup-grid__item mockup-width--forth">
+									<p class="paint-area paint-area--text">
+										世界范围内有记录的飞行事故共22314起，记录数最多的国家是美国（3993起）和俄罗斯（1232起），
+										我国的记录为490起。
+										但是某个地区事故发生的多寡并不能代表当地的飞行安全水平。</p>
+									<button href="#" class="mockup-button paint-area"><span>Read more</span> <i class="fa fa-chevron-right"></i></button>
+								</div>
+						</div>
 					<div class="mockup-content mockup-grid">
-						<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">近百年来我国航空飞行事故记录</h2>
+						<h3 class="mockup-heading mockup-heading--single paint-area paint-area--text">
+						</br>
+						</br>
+							如下图所示，截止2018年底由大陆的航空公司、机构负责运营的飞机一共出现了
+								<font style="font-size: 35px;">216</font>起事故，造成
+								<font style="font-size:35px;">2260</font>人死亡。
+								在上世纪40年代有一个事故高峰期，50-70年代事故减少，90年代安全状况又急转直下。
+
+						</h3>
 						<figure class="mockup-grid__item mockup-width--third">
-							<div id="pic1",style="width: 400px; height: 100px;" class="mockup-img"></div>
 							<figcaption class="mockup-caption mockup-caption--box paint-area">
 								<h3 class="paint-area paint-area--text">中国大陆1922年-2018年发生的航空事故数与伤亡人数</h3>
-								<p class="paint-area paint-area--text">由图示，我们可以发现我国航空事故有两个高峰期，分别是40年代和90年代。40年代的中国处于战乱中，不安全的局势增加了航空危险。而90年代是民航开始自主运营的重要事件段，加之国际形势动荡，让90年代的航空安全事故频发。 是21世纪以来，我国航空事故数量有明显下降。</p>
+							</figcaption>
+							<div id="pic1",style="width: 400px; height: 100px;" class="mockup-img"></div>
+
+						</figure>
+						
+						
+						<h3 class="mockup-heading mockup-heading--single paint-area paint-area--text">
+						</br>
+						</br>
+							1920-1950年代，<font style="font-size: 35px;">操作失误</font>是飞机出事故的主要原因。机毁人亡的比例大。
+							<br>1960-1990年代，民用航空<font style="font-size: 35px;">劫机事件</font>频发。操作失误依然是造成飞机损毁的罪魁祸首。
+							
+						</h3>
+						<figure class="mockup-grid__item mockup-width--half">
+								<figcaption style="height: 100px;"class="mockup-caption mockup-caption--box paint-area">
+								<h3 class="paint-area paint-area--text">20年代-50年代事故分类</h3>
+								</figcaption>
+							<div id="分类50年代",style="width: 400px; height:300px;" class="mockup-img"></div>
+
+						</figure>
+						<figure class="mockup-grid__item mockup-width--half">
+								<figcaption style="height: 100px;"class="mockup-caption mockup-caption--box paint-area">
+								<h3 class="paint-area paint-area--text">60年代-90年代事故分类</h3>
+								</figcaption>
+							<div id="分类90年代",style="width: 400px; height:300px;" class="mockup-img"></div>
+
+						</figure>
+
+
+						<figure class="mockup-grid__item mockup">
+						<blockquote class="mockup-blockquote">
+								<p class="paint-area paint-area--text">
+								由左侧的图表可看出，50年代之前我国通用航空的事故较多，民航次之，军用飞机也有一定的损坏，
+								出现事故征候以后有极大概率会机毁人亡。
+								虽然当时设备落后，战争频发等因素对航空安全造成了影响，
+								但是大部分事故的原因，都源于操作失误。
+								譬如1946年发生在上海的“黑色圣诞之夜空难”——
+							</br>
+								</br>12月25日当天，整个上海“细雨飘濛,浓雾密布”。
+									然而飞行员不顾天气恶劣，明知大雾仍然强行降落，在5小时内3架客机机毁人亡。3起空难造成了74人死亡，8人受伤的严重后果。
+									事件发生后，航空业内的检讨之声开始高涨。然而情况并没有因此得到改善，1947年的1月5日，上海和青岛又有两架飞机不幸失事。
+									1月7日，中央、中国两大航空公司总经理前往南京，参加交通部召集的航空安全问题会议，会议上交通部下令航空公司停止客运一周，并对航空公司进行全方位检查。
+								</br>
+								</br>
+									以惨痛的教训为代价，在50年代-70年代，我国飞行事故数有明显的减少。
+									但从80年代开始，事故概率出现了一个新的高峰期。
+
+								</p>
+							</blockquote>
+						</figure>
+
+						<figure class="mockup-grid__item mockup-width--third">
+							<div id="pic3.2",style="width: 400px; height: 100px;" class="mockup-img"></div>
+							<figcaption class="mockup-caption mockup-caption--box paint-area">
+								<h3 class="paint-area paint-area--text">世界与中国大陆每百万架次航班事故率</h3>
 							</figcaption>
 						</figure>
 
-						<div class="mockup-content">
-							<blockquote class="mockup-blockquote">
-								<p class="paint-area paint-area--text">同时，为了解目前大众对于飞行安全的忧虑和看法，我们进行了简单的一次问卷调查，调查结果显示：
-									<br>
-									在对航空事故的感知来说，认为航空事故没什么变化的受访者和认为航空事故点多的受访者数相同。
-									但对于航空事故，受访者总体持悲观情绪，只有一成受访者认为自己可以在航空事故中生还。 
-									而对于发生过航空事故的航空公司及飞机机型，7成受访者表示有“一朝被蛇咬，十年怕草绳”的态度，会选择避开该航空公司和飞机机型。 
-									最后，受访者普遍认为机器故障是航空事故发生的最大诱因，再依次是天气、恐袭、机组人员失误。 
-									这小范围的调查有一定的参考性，受访者的对航空安全的态度低迷，每次飞行前或多或少都会担心安全问题，仿佛每次飞行都是一次生命赌博。
-									实际情况真的如大家担忧的那么严重吗？我们对这些记录进行了进一步分析。
-								</p>
-								<p></p>
-							</blockquote>
-						</div>
-
-							<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text"><br>百年事故记录具体情况</h2>
-							<figure class="mockup-grid__item mockup-width--half">
-								<div id="pic2.1",style="width: 400px; height:300px;" class="mockup-img"></div>
-								<figcaption style="height: 100px;"class="mockup-caption mockup-caption--box paint-area">
-									<h3 class="paint-area paint-area--text">乘客生还率统计</h3>
-								</figcaption>
-							</figure>
-							<figure class="mockup-grid__item mockup-width--half">
-								<div id="pic2.2",style="width: 400px; height: 300px;" class="mockup-img"></div>
-								<figcaption style="height: 100px;" class="mockup-caption mockup-caption--box paint-area">
-									<h3 class="paint-area paint-area--text">发生事故次数最多的机型排名</h3>
-								</figcaption>
-							</figure>
-							
-							<div class="mockup-content">
-									<blockquote class="mockup-blockquote">
+						<figure class="mockup-grid__item mockup">
+								<blockquote class="mockup-blockquote">
 										<p class="paint-area paint-area--text">
-											航空事故固然可怕，但不是每一个航空事故都会造成人员伤亡的。数据显示，59.7%的航空事故没有人伤亡，全员遇难的航空事故占全部事故的12%。 
-											发生航空事故时，乘客不要慌张，听从机组人员指挥，增加生还率。
-											在发生事故前8名飞机机型中，波音737占据榜首。事故次数的多寡仅供参考，不能说明该机型的故障率最高。
+											通过上图对比近40年来世界和中国每百万架航班发生事故的概率，
+											可以更加明显地看到80到95这15年时间内，大陆出现航空事故的概率高于世界平均。
+											虽然当时我国已经步入了改革开放的新时期，许多大型的客机投入使用，
+											可是机组人员的驾驶水平和航空公司的管理水平却没能跟上飞行事业的发展。
+										</br>
+										</br>例如在1992年7月的南京空难，107人死亡。
+											同年11月的桂林空难，机上乘客133人和机组人员8人全部遇难，无一生还。
+											后续的报道显示，这两起事故极大可能是由人为操作失误而引起。
+											除此之外，90年代中国也出现了令世界瞠目结舌的劫机潮。
+										</br>
+										</br>											
+											1990年广州白云机场劫机事件，劫机者威胁飞行员将飞机开往台湾寻求政治庇护。
+											在飞行员试图降落时，这架飞机不幸与另一架客机相撞起火，128名乘客因此遇难。
+	
+											根据我们收集到的数据，随后的92到93年我国也陆续发生了13起劫机事件，所幸都没有造成人员伤亡。
+											但这一桩桩“人祸”，充分暴露出当时我国航空基础的薄弱与人员管理的混乱。					
+											
+										</br>
+										</br>			
+											彼时在国外旅客眼里，“中国航空”就是安全记录极差的代名词。
+											面对严峻的飞行安全、特别是民航安全状况，我国的航空公司和政府部门都开始了大刀阔斧的改革。
+											1996年《中华人民共和国民用航空法》的颁布实施，让我国民航正式走向正规、科学的管理。
+											而各地方航空公司逐渐也脱离民航管理局，开始了长达数年的兼并与重组。
+											2000年后，大陆形成了以南方航空集团，东方航空集团，中国国际航空三大航空集团并驾齐驱的良性竞争局面。
+								
+											航空安全的进步与积累也收到了成效，千禧年后我国发生航空事故的概率要远小于世界。
 										</p>
-										<p></p>
+
 									</blockquote>
-							</div>
-
-					</div><!-- /mockup-grid -->
+						</figure>
+							<br>
+							<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">
+								2000年以后我国航空界共发生了38起威胁飞行安全的事件。
+								<br>其中<font style="font-size: 35px;">57.9%</font>
+								的事故生还率为
+								<font style="font-size: 35px;">100%</font>。
+							</h2>
+							<figure class="mockup-grid__item mockup-width">
+									<figcaption style="height: 100px;"class="mockup-caption mockup-caption--box paint-area">
+									<h3 class="paint-area paint-area--text">航空事故生还率（2000年1月-2019年4月)</h3>
+									</figcaption>
+								<div id="pic2_1",style="width: 400px; height:300px;" class="mockup-img"></div>
+	
+							</figure>
 				</section>
 
-				<section class="mockup-section mockup-section--dark paint-area">
-					<div class="mockup-content mockup-grid">
-						<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">世界各国航空事故数统计</h2>
-						<figure class="mockup-grid__item mockup-width--75">
-							<div id="worldmap",style="width: 500px; height: 400px;" class="mockup-img mockup-img--large"></div>
-						</figure>
-						<div class="mockup-grid__item mockup-width--forth">
-							<p class="paint-area paint-area--text">从1919年起，世界范围内有记录的飞行事故共两万余起，事故发生最多的国家是美国和俄罗斯。</p>
-							<button class="mockup-button paint-area"><span>Read more</span> <i class="fa fa-chevron-right"></i></button>
-						</div>
-						<figure class="mockup-grid__item mockup-width--third">
-								<div id="pic3.2",style="width: 400px; height: 100px;" class="mockup-img"></div>
-								<figcaption class="mockup-caption mockup-caption--box paint-area">
-									<h3 class="paint-area paint-area--text">每万架次航班事故率（1976年-2016年）</h3>
-									<p class="paint-area paint-area--text">从图中看出，93年有个事故高峰期（原因是劫机事件频发）。步入21世纪，来我国严格把控飞行安全。从2006年起，没万架次航班事故率已降至0.1一下，事故数少于国际水平。</p>
-								</figcaption>
-						</figure>
-					</div><!-- /mockup-grid -->
-				</section>
 
 				<section class="mockup-section mockup-section--dark paint-area">
 					<div class="mockup-content mockup-grid">
 						<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">结语</h2>
-						<figure class="mockup-grid__item mockup-width--half">
-							<div class="mockup-img mockup-img--large"><i class="fa fa-picture-o"></i></div>
-						</figure>
-						<div class="mockup-grid__item mockup-width--half">
-							<p class="paint-area paint-area--text">航空事故固然让人谈虎色变，但我国每天约有2千4百万乘客在天上飞，发生事故的比例特别小。
-									再者从我国航空事故数据中可以看出，我国民航的安全指数较高，国内乘客可以安心的乘坐国内航空公司的航班。																									
-									如若遇到航空事故，乘客也要听从机组人员的安排，增加自身生还率。</p>
-							<button class="mockup-button paint-area"><span>Read more</span> <i class="fa fa-chevron-right"></i></button>
+						<div class="mockup-grid__item mockup-width">
+							<blockquote class="mockup-blockquote">
+							<p class="paint-area paint-area--text">
+							近几十年，我国航空从安全记录极差，到超越世界安全记录的平均安全水平，说明我国飞行安全取得了长足的进步。
+							中国航空在世界航空界的拥有了更高的话语权，这不是靠“好运气”得来的，每次航空事故背后都蕴藏着航空交通安全的进步的可能，
+							每一次行业性反思都出自全球民航人的共同目标：让飞行变得更安全。中国航空持续安全，离不开政府、各航空公司、机构和广大旅客的共同努力。
+							</p>
+							</blockquote>
 						</div>
 					</div><!-- /mockup-grid -->
 				</section>
 
 				<section class="mockup-section mockup-section--dark paint-area">
-					<div class="mockup-content mockup-grid">
 						<figure class="mockup-grid__item mockup-width--third">
 							<div class="mockup-pricing paint-area">
 								<h3 class="mockup-heading mockup-heading--box paint-area"><span>数据来源</span></h3>
-								<div class="mockup-bigtext"><span class="paint-area paint-area--text">
-										ASN : https://aviation-safety.net
-									<br>世界银行 ：https://data.worldbank.org
-										</span></div>
+								<div class="mockup-bigtext">									
+										<font style="font-size: 18px">飞行安全网 : https://aviation-safety.net</font>
+										<Br><font style="font-size: 18px">世界银行 ：https://data.worldbank.org</font>
+									</div>
 								<div class="mockup-list-wrap paint-area">
 									<ul class="mockup-list paint-area paint-area--text">
-										<li>指导老师：杨洸 汪翩翩</li>
-										<li>组员：XXX XXX XXX </li>
+										<li style="font-size: 18px">指导老师：杨洸 汪翩翩</li>
+										
 									</ul>
 								</div>
 							</div>
 						</figure>
-					</div>
+					
 				</section>
 			</div><!-- /mockup-browser -->
 		</div><!-- /content -->
@@ -161,8 +226,9 @@
 	<script src="map/js/world.js"></script>
 	<script src="pic1.js"></script>
 	<script src="pic2_1.js"></script>
-	<script src="pic2_2.js"></script>
 	<script src="pic3_2.js"></script>
+	<script src="分类50年代.js"></script>
+	<script src="分类90年代.js"></script>
 	<script src="worldmap.js"></script>
 	<script>
 			window.addEventListener("resize", function () {

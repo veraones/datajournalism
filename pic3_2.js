@@ -48,11 +48,11 @@ var time = [
 ]
 var app = {};
 option = {
-       backgroundColor: '#ffffff',
+    backgroundColor: '#f7f7f7',
         title: {
-            text: '每万架次航班事故率（1976-2016）',
-            subtext: '数据来源于asn与世界银行数据库',
-            x: 'left'
+            //text: '每万架次航班事故率（1976-2016）',
+            //subtext: '数据来源于asn与世界银行数据库',
+           // x: 'left'
         },
         tooltip: {
             trigger: 'axis'
@@ -91,30 +91,50 @@ option = {
                 color: '#ff9933'
             }]
         },*/
+
         series: [
             {
             name: '中国大陆',
             type: 'line',
-            color: '#096',
+            color: '#226b80',
+            smooth:0.3,
+            lineStyle:{
+                width:4//设置线条粗细
+            },
+
             data: time.map(function (item) {
-				return item[1];
+				return item[1]*100;
             }),
             markLine: {
+                symbol:'none',//去掉箭头
+                itemStyle: {
+
+                    normal: {
+                        
+                        color:"ffffff",
+                        // color: null
+                        // 线宽，这里线宽是屏幕的像素大小
+                        width: 1,
+                        // 线的透明度
+                        opacity: 0.2,
+                    }
+                },
+                
                 silent: true,
                 data: [ {
-                    yAxis: 0.1
+                    yAxis: 10
                 },  {
-                    yAxis: 0.2
+                    yAxis: 20
                 },{
-                    yAxis: 0.3
+                    yAxis: 30
                 }, {
-                    yAxis: 0.4
+                    yAxis: 40
                 }, {
-                    yAxis: 0.5
+                    yAxis: 50
                 },{
-                    yAxis: 0.6
+                    yAxis: 60
                 }, {
-                    yAxis: 0.7
+                    yAxis:70
                 }]
             },
             large:true
@@ -122,10 +142,15 @@ option = {
         {
             name: '世界',
             type: 'line',
-            color: '#ff9933',
+            color: '#40a798',
+            smooth:0.3,
+            lineStyle:{
+                width:4//设置线条粗细
+            },
+
             data: time.map(function (item) {
-				return item[2];
-			}),
+				return item[2]*100;
+            }),
             large:true
         },
     
