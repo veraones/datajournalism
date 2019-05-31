@@ -1,10 +1,10 @@
 var dom = document.getElementById("分类50年代");
-var myChart = echarts.init(dom);
+var myChart50s = echarts.init(dom);
 var app = {};
 option = null;
 var data = [
     {
-        name: '完全损毁',
+        name: '飞机完全损毁',
         children: [
         {
             name:'军用',
@@ -72,6 +72,12 @@ var data = [
 ];
 
 option = {
+    title: {
+        text: '20-50年代事故类型、原因分类',
+        //subtext: '数据来源于asn与世界银行数据库',
+        x:'center',
+        y: 'bottom',
+    },
 
     visualMap: {
         type: 'continuous',
@@ -116,6 +122,5 @@ option = {
         }]
     }}
 ;
-if (option && typeof option === "object") {
-    myChart.setOption(option, true);
-}
+myChart50s.setOption(option);
+

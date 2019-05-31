@@ -86,10 +86,10 @@ option = {
         },
 
         data:[
-            {value:9, name:'0'},
-            {value:2, name:'1至49'},
-            {value:5, name:'50至99'},
-            {value:22, name:'100'},
+            {value:9, name:'0%'},
+            {value:2, name:'1%至49%'},
+            {value:5, name:'50%至99%'},
+            {value:22, name:'100%'},
         ]
     
     }]

@@ -70,7 +70,7 @@ var time = [
 ]
 var app = {};
 option = {
-    backgroundColor: '#f7f7f7',
+   // backgroundColor: '#f7f7f7',
         title: {
             text: '',
             x: 'left'

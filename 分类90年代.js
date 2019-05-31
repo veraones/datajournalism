@@ -1,11 +1,11 @@
 
 var dom = document.getElementById("分类90年代");
-var myChart = echarts.init(dom);
+var myChart90s = echarts.init(dom);
 var app = {};
 option = null;
 var data = [
     {
-        name: '完全损毁',
+        name: '飞机完全损毁',
         children: [
         {
             name:'军用',
@@ -61,6 +61,13 @@ var data = [
 ];
 
 option = {
+    title: {
+        text: '60-90年代事故类型、原因分类',
+        //subtext: '数据来源于asn与世界银行数据库',
+        x:'center',
+        y: 'bottom',
+        color:''
+    },
     visualMap: {
         type: 'continuous',
         min: 1,
@@ -104,6 +111,4 @@ option = {
         }]
     }}
 ;
-if (option && typeof option === "object") {
-    myChart.setOption(option, true);
-}
+myChart90s.setOption(option);

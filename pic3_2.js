@@ -48,7 +48,7 @@ var time = [
 ]
 var app = {};
 option = {
-    backgroundColor: '#f7f7f7',
+    //backgroundColor: '#f7f7f7',
         title: {
             //text: '每万架次航班事故率（1976-2016）',
             //subtext: '数据来源于asn与世界银行数据库',
