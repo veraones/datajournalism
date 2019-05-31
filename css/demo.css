@@ -213,7 +213,7 @@ button:focus {
 .mockup-browser {
 	position: relative;
 	max-width: 1300px;
-	margin: 0 auto;
+
 	background: #fff;
 	color: rgb(83, 83, 85);
 	 /*-webkit-touch-callout: none;
