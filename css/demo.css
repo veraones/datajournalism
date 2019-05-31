@@ -76,12 +76,12 @@ button:focus {
 	background: #333 url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 50px;
-	height: 50px;
+	width: 4em;
+	height: 4em;
 	margin-top: 50px;
 	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 80%;
+	opacity: 70%;
 }
 
 #scroller2 {
@@ -93,12 +93,12 @@ button:focus {
 	background: #333 url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 50px;
-	height: 50px;
+	width: 4em;
+	height: 4em;
 	margin-top: 50px;
 	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 80%;
+	opacity: 70%;
 }
 
 #scroller3 {
@@ -110,12 +110,12 @@ button:focus {
 	background: #333 url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 50px;
-	height: 50px;
+	width: 4em;
+	height: 4em;
 	margin-top: 50px;
 	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 80%;
+	opacity: 70%;
 }
 #scroller4 {
 	margin: auto;  
@@ -126,12 +126,12 @@ button:focus {
 	background: #333 url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 50px;
-	height: 50px;
+	width: 4em;
+	height: 4em;
 	margin-top: 50px;
 	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 80%;
+	opacity: 70%;
 }
 #scroller5 {
 	margin: auto;  
@@ -142,12 +142,12 @@ button:focus {
 	background: #333 url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 50px;
-	height: 50px;
+	width: 4em;
+	height: 4em;
 	margin-top: 50px;
 	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 80%;
+	opacity: 70%;
 }
 
 @keyframes scrolling

@@ -38,14 +38,11 @@
 		})
 
 		$('#scroller4').on('click',function(event){
-			var pic4 = $('#header_pics4').offset().top;
-			$('html,body').animate({scrollTop: pic4 + 'px'}, 800);
-			$('#header_word4').fadeIn(2600);
-		})
-		$('#scroller5').on('click',function(event){
 			var pic5 = $('#neirong').offset().top;
 			$('html,body').animate({scrollTop: pic5 + 'px'}, 800);
 		})
+		/*	<video src="file.mp4" class="vedio" autoplay muted loop="loop">
+				</video>*/
 	})
 </script>
 <body>
@@ -56,6 +53,7 @@
 				<p id="header_title_one" >
 						<img  src="title.png">
 				</p>			
+
 				<div id="scroller1" title="Scroll Down"></div>
 		</div>
 
@@ -90,15 +88,6 @@
 				<div id="scroller4" title="Scroll Down"></div>
 			</div>
 
-			<div class="header_pic" >
-				<div class="header_word" id="header_word4">
-					<h1>1月14日 | 08:30</h1>
-					<p style="font-size: 1.2em;">伊朗发生坠机事件，两名机组人员幸存，10人下落不明。</p>
-				</div>
-				<div class="header_bg"  style="background-image:url(yilang.jpg);" id="header_pics4"></div>
-				<div id="scroller5" title="Scroll Down"></div>
-			</div>			
-		</div>
 		
 		<div id="neirong" class="content">	
 
