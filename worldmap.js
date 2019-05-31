@@ -5,7 +5,7 @@ var app = {};
 option = null;
 
     option = {
-        backgroundColor:'#ffebd3',
+        //backgroundColor:'#ffebd3',
         title: {
             //text: '各国发生航空事故数量统计 (1919.08.11-2019.04.24)',
             subtext: '1919.08.11-2019.04.24',
@@ -41,8 +41,8 @@ option = null;
                 type: 'map',
                 roam: true,
                 map: 'world',
-                zoom:3.5,
-                center: [100, 30],
+                zoom:1.2, /*放大*/
+                //center: [100, 30], /*中心坐标*/
                 itemStyle:{
                     
                     emphasis:{label:{show:true}}
