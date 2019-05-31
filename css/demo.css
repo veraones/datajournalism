@@ -73,81 +73,76 @@ button:focus {
 	left: 0; bottom: 0; right: 0;  
 	top: 62%;
 	z-index: 1;
-	background: #333 url(arrow.svg) repeat-y;
+	background: rgb(255,255,255,0.3)url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 4em;
-	height: 4em;
+	width:4.5rem;
+	height: 4.5rem;
 	margin-top: 50px;
-	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-animation: scrolling 1.5s 2s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 70%;
 }
 
 #scroller2 {
 	margin: auto;  
 	position: absolute;  
-	left: 0; bottom: 0; right: 0; 
-	top: 70%; 
+	left: 0; bottom: 0; right: 0;  
+	top: 62%;
 	z-index: 1;
-	background: #333 url(arrow.svg) repeat-y;
+	background: rgb(255,255,255,0.3)url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 4em;
-	height: 4em;
+	width:4.5rem;
+	height: 4.5rem;
 	margin-top: 50px;
-	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-animation: scrolling 1.5s 2s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 70%;
 }
 
 #scroller3 {
 	margin: auto;  
 	position: absolute;  
-	left: 0; bottom: 0; right: 0; 
-	top: 70%;
+	left: 0; bottom: 0; right: 0;  
+	top: 62%;
 	z-index: 1;
-	background: #333 url(arrow.svg) repeat-y;
+	background: rgb(255,255,255,0.3)url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 4em;
-	height: 4em;
+	width:4.5rem;
+	height: 4.5rem;
 	margin-top: 50px;
-	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-animation: scrolling 1.5s 2s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 70%;
 }
 #scroller4 {
 	margin: auto;  
 	position: absolute;  
-	left: 0; bottom: 0; right: 0; 
-	top: 70%;
+	left: 0; bottom: 0; right: 0;  
+	top: 62%;
 	z-index: 1;
-	background: #333 url(arrow.svg) repeat-y;
+	background: rgb(255,255,255,0.3)url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 4em;
-	height: 4em;
+	width:4.5rem;
+	height: 4.5rem;
 	margin-top: 50px;
-	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-animation: scrolling 1.5s 2s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 70%;
 }
 #scroller5 {
 	margin: auto;  
 	position: absolute;  
-	left: 0; bottom: 0; right: 0; 
-	top: 70%;
+	left: 0; bottom: 0; right: 0;  
+	top: 62%;
 	z-index: 1;
-	background: #333 url(arrow.svg) repeat-y;
+	background: rgb(255,255,255,0.3)url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
-	width: 4em;
-	height: 4em;
+	width:4.5rem;
+	height: 4.5rem;
 	margin-top: 50px;
-	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-animation: scrolling 1.5s 2s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 70%;
 }
 
 @keyframes scrolling
