@@ -3,105 +3,192 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="user-scalable=0">
+	<meta name="viewport" content="width=1363, maximum-scale=1.0,user-scalable=yes">
 	<title>数说中国航空安全发展历程</title>
 	<script src="echarts.js"></script>
 	<script src="jquery-3.4.0.min.js"></script>
+	<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+
+
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 </head>
+
+<!--Jquery用于效果控制-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		//点击按钮滑动效果
+		$('#scroller1').on('click',function(event){
+			var pic1 = $('#header_pics1').offset().top;
+			$('html,body').animate({scrollTop: pic1 + 'px'}, 800);
+			//淡入效果
+			$('#header_word1').fadeIn(2600);
+		})
+
+		$('#scroller2').on('click',function(event){
+			var pic2 = $('#header_pics2').offset().top;
+			$('html,body').animate({scrollTop: pic2 + 'px'}, 800);
+			$('#header_word2').fadeIn(2600);
+		})
+
+		$('#scroller3').on('click',function(event){
+			var pic3 = $('#header_pics3').offset().top;
+			$('html,body').animate({scrollTop: pic3 + 'px'}, 800);
+			$('#header_word3').fadeIn(2600);
+		})
+
+		$('#scroller4').on('click',function(event){
+			var pic4 = $('#header_pics4').offset().top;
+			$('html,body').animate({scrollTop: pic4 + 'px'}, 800);
+			$('#header_word4').fadeIn(2600);
+		})
+		$('#scroller5').on('click',function(event){
+			var pic5 = $('#neirong').offset().top;
+			$('html,body').animate({scrollTop: pic5 + 'px'}, 800);
+		})
+	})
+</script>
 <body>
+	
 	<div class="container">
-		<div class="content">
-			<div class="mockup-browser">
-				<section class="mockup-section paint-area">
-					<div class="mockup-content mockup-grid">
-						<div class="mockup-grid__item mockup-width--half">
-							<h1 class="mockup-heading mockup-heading--large paint-area paint-area--text">数说中国航空安全发展历程<span class="mockup-heading__subline">——以事故记录的视角</span></h3>
-							<button class="mockup-button paint-area"><span>Aviation Safety</span> <i class="fa fa-chevron-right"></i></button>
-						</div>
-						<figure class="mockup-grid__item mockup-width--half">
-							<div class="mockup-img mockup-img--large">
-								<img style=" width:100%;
-								height:100%;
-								max-height: 100%;
-								max-width: 100%;"src="plane2.png">
-							</div>
-						</figure>
-					</div><!-- /mockup-grid -->
-				</section>
 
+		<div style="height: 99vh;width: 100%;position:relative;background:linear-gradient(#132358,#6f7a8f,#132358)">
+				<p id="header_title_one" >
+						<img  src="title.png">
+				</p>			
+				<video src="file.mp4" class="vedio" autoplay muted loop="loop">
+				</video>
+				<div id="scroller1" title="Scroll Down"></div>s
+		</div>
+
+
+		<div id="pics">
+			<div class="header_pic" >
+				<div class="header_word" id="header_word1">
+					<h1>5月8日 | 06:30</h1>
+					<p style="font-size: 1.2em;">孟加拉航空一架客机在缅甸仰光国际机场21跑道着陆时冲出跑道，机身“断成三截”。
+							包括机组人员在内的多人受伤，机长头部受伤。</p>
+				</div>
+				<div class="header_bg" style="background-image:url(mengjiala.jpg);"id="header_pics1"></div>
+				<div id="scroller2" title="Scroll Down"></div>
+			</div>
+
+			<div class="header_pic">
+				<div class="header_word" id="header_word2">
+					<h1>5月5日</h1>
+					<p style="font-size: 1.2em;">俄罗斯航空一架客机从莫斯科机场起飞后失火，在起飞机场紧急迫降，造成至少41人死亡。
+						墨西哥发生一起造成14人死亡的航空事故，遇难者包括11名乘客和3名机组人员。</p>
+				</div>
+				<div class="header_bg" style="background-image:url(eluosi.jpg);"  id="header_pics2"></div>
+				<div id="scroller3" title="Scroll Down"></div>
+			</div>
+
+			<div class="header_pic">
+				<div class="header_word" id="header_word3">
+					<h1>3月10日 | 08:45</h1>
+					<p style="font-size: 1.2em;">埃塞俄比亚航空的一架客机起飞不久后坠毁，机上149名乘客和8名机组成员无一生还，其中包括8位中国公民。</p>
+				</div>
+				<div class="header_bg" style="background-image:url(aiji.jpg);" id="header_pics3"></div>
+				<div id="scroller4" title="Scroll Down"></div>
+			</div>
+
+			<div class="header_pic" >
+				<div class="header_word" id="header_word4">
+					<h1>1月14日 | 08:30</h1>
+					<p style="font-size: 1.2em;">伊朗发生坠机事件，两名机组人员幸存，10人下落不明。</p>
+				</div>
+				<div class="header_bg"  style="background-image:url(yilang.jpg);" id="header_pics4"></div>
+				<div id="scroller5" title="Scroll Down"></div>
+			</div>			
+		</div>
+		
+		<div id="neirong" class="content">	
+
+			<div class="mockup-browser">			
 				<section class="mockup-section--dark paint-area">
-					<div class="mockup-content">
+					<h1 class="xiaobiaoti">
+						<br>
+								航空事故频发，航空安全让人担忧
+					</h1>	
+					<div class="mockup-content  mockup-grid">
 						<blockquote class="mockup-blockquote">
-							<p class="paint-area paint-area--text">自今年一月份以来，全世界造成人员伤亡的民航事故已经多达9起，3月10号的埃航空难更是致使机组157人全部遇难。
-								埃航飞机失事尚未超过20小时，我国民航局就率先下达了停飞波音737-8飞机的通知，随后全球多个国家和地区也纷纷下达禁飞令。
-								<br>
-								<br>
-								政府早于FAA（美国联邦航空管理局）发布停飞波音737-8指令，体现出当前我国对飞行安全的追求已经走在了FAA的前面。而近年来国内航空也几乎没有人员伤亡的报道，似乎也说明了乘坐国内航空公司出行比国际航空更安全。
-								我们从飞行安全网站ASN收集一系列详细的数据，其中包含了民用、通用、军用航空的记录。
-								我们希望从航空事故记录的角度，结合对某些时间节点的实际情况的探讨，尽可能展现多年来国内航空安全的发展历程。
-								需要说明的是，本文中飞行事故并不完全等同于空难，一些出现征候但没有造成严重后果的事件也在我们的探讨范围内。
-							</p>
-							<p></p>
+							
+							<p class="paint-area paint-area--text">
+								据不完全统计，从1月中旬伊朗发生坠机事件至今，在不到5个月时间里，全世界造成伤亡的民航事故已经多达9起，其中最为严重的当属3月10日埃塞俄比亚航空302号班机坠毁事故，该起事故造成机上157人全部罹难。
+								今年航空事故频发，让本就处在风口浪尖上的航空安全问题的热度只增未减。
+								航空出行，真的这么不安全吗？
+								<p></p>
+							</p>	
 						</blockquote>
-					</div>
-				</section>
-
-
-				<section class="mockup-section mockup-section paint-area">
 						<div class="mockup-content mockup-grid">
 								<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">
 									1919年以来发生在世界各国的飞行事故
 								</h2>
-								<figure class="mockup-grid__item mockup-width--75">
-									<div id="worldmap", style="height: 320px" class="mockup-img mockup-img--large"></div>
+								<figure class="mockup-grid__item mockup-width">
+									<div id="worldmap", style="height: 500px" class="mockup-img mockup-img--large"></div>
 								</figure>
-								<div class="mockup-grid__item mockup-width--forth">
+								<div class="mockup-grid__item mockup-width">
 									<p class="paint-area paint-area--text">
-										世界范围内有记录的飞行事故共22314起，记录数最多的国家是美国（3993起）和俄罗斯（1232起），
-										我国的记录为490起。
-										但是某个地区事故发生的多寡并不能代表当地的飞行安全水平。</p>
-									<button href="#" class="mockup-button paint-area"><span>Read more</span> <i class="fa fa-chevron-right"></i></button>
+										世界范围内有记录的飞行事故共22314起，事故发生数最多国家是美国（3993起）和俄罗斯（1232起），
+										我国大陆地区的记录为490起。</p>
 								</div>
 						</div>
-					<div class="mockup-content mockup-grid">
-						<h3 class="mockup-heading mockup-heading--single paint-area paint-area--text">
-						</br>
-						</br>
-							如下图所示，截止2018年底由大陆的航空公司、机构负责运营的飞机一共出现了
-								<font style="font-size: 35px;">216</font>起事故，造成
-								<font style="font-size:35px;">2260</font>人死亡。
-								在上世纪40年代有一个事故高峰期，50-70年代事故减少，90年代安全状况又急转直下。
 
-						</h3>
+						<blockquote class="mockup-blockquote">
+								<p class="paint-area paint-area--text">
+										我们从飞行安全网站（Aviation Safety Network)上收集了从1919年到现在发生过的飞行事故记录。除了空难的情况记录，其中也包含了民用、通用、军用航空出现过事故征候但没有造成人员伤亡事故记录。
+										一百年来，世界范围内发生的航空事故共22314起。
+										相比每天约有1.1万架飞机在飞行的数据，22314起事故只是很小一部分，但若是掉以轻心，每一次事故都有可能造成严重的后果，每一次事故都不该被忽视。
+								</p>	
+							    <p></p>
+						</blockquote>
+					</div>
+				</section>
+
+				<section class="mockup-section paint-area">	
+						
+						<h1  class="xiaobiaoti" >
+								我国航空安全发展情况
+						</h1>
+					<div class="mockup-content mockup-grid">					
+						<blockquote class="mockup-blockquote">
+						<p class="paint-area paint-area--text">
+								今年3月份，埃航事件发生尚未超过20小时，我国民航局就率先下达了停飞波音737-8飞机的通知，随后全球多个国家和地区也纷纷下达禁飞令。																
+								政府早于FAA（美国联邦航空管理局）发布停飞波音737-8指令，体现出当前我国对飞行安全的追求已经走在了FAA的前面。
+								近些年国内航空也几乎没有人员伤亡的报道，似乎也说明了乘坐国内航空公司出行比国际航空更安全。
+								我国作为全球第二大航空吞吐大国，一直以来的航空安全情况究竟如何？								
+								<p></p>
+						</p>
+						</blockquote>
+
 						<figure class="mockup-grid__item mockup-width--third">
-							<figcaption class="mockup-caption mockup-caption--box paint-area">
-								<h3 class="paint-area paint-area--text">中国大陆1922年-2018年发生的航空事故数与伤亡人数</h3>
-							</figcaption>
+							<h2 style="margin:0;font-size: 35px;text-align: center;">
+								216起事故，2260名遇难者
+							</h2>
 							<div id="pic1",style="width: 400px; height: 100px;" class="mockup-img"></div>
-
 						</figure>
+
+						<blockquote class="mockup-blockquote">
+						<p class="paint-area paint-area--text">								
+								如上图所示，截止2018年底由大陆的航空公司、机构负责运营的飞机一共出现了
+								216起事故，造成
+								2260人死亡。
+								在上世纪40年代我国有一个事故高峰期，50-70年代事故减少，90年代安全状况又急转直下。
+								进入21世纪后虽然人们航空出行次数日渐增加，但是事故数量已屈指可数。
+								<p></p>
+						</p>
+						</blockquote>	
 						
-						
-						<h3 class="mockup-heading mockup-heading--single paint-area paint-area--text">
-						</br>
-						</br>
-							1920-1950年代，<font style="font-size: 35px;">操作失误</font>是飞机出事故的主要原因。机毁人亡的比例大。
+						<h3 style="text-align:center" class="mockup-heading mockup-heading--single paint-area paint-area--text">
+							1920-1950年代，<font style="font-size: 35px;font-weight:bold">操作失误</font>是飞机出事故的主要原因。机毁人亡的比例大。
 							<br>1960-1990年代，民用航空<font style="font-size: 35px;">劫机事件</font>频发。操作失误依然是造成飞机损毁的罪魁祸首。
 							
 						</h3>
 						<figure class="mockup-grid__item mockup-width--half">
-								<figcaption style="height: 100px;"class="mockup-caption mockup-caption--box paint-area">
-								<h3 class="paint-area paint-area--text">20年代-50年代事故分类</h3>
-								</figcaption>
 							<div id="分类50年代",style="width: 400px; height:300px;" class="mockup-img"></div>
 
 						</figure>
 						<figure class="mockup-grid__item mockup-width--half">
-								<figcaption style="height: 100px;"class="mockup-caption mockup-caption--box paint-area">
-								<h3 class="paint-area paint-area--text">60年代-90年代事故分类</h3>
-								</figcaption>
 							<div id="分类90年代",style="width: 400px; height:300px;" class="mockup-img"></div>
 
 						</figure>
@@ -122,8 +209,8 @@
 									1月7日，中央、中国两大航空公司总经理前往南京，参加交通部召集的航空安全问题会议，会议上交通部下令航空公司停止客运一周，并对航空公司进行全方位检查。
 								</br>
 								</br>
-									以惨痛的教训为代价，在50年代-70年代，我国飞行事故数有明显的减少。
-									但从80年代开始，事故概率出现了一个新的高峰期。
+									以惨痛的教训为代价，50年代至70年代我国飞行事故数有明显的减少。
+									但80到90年代，事故率又出现了一个新的高峰期。
 
 								</p>
 							</blockquote>
@@ -132,14 +219,14 @@
 						<figure class="mockup-grid__item mockup-width--third">
 							<div id="pic3.2",style="width: 400px; height: 100px;" class="mockup-img"></div>
 							<figcaption class="mockup-caption mockup-caption--box paint-area">
-								<h3 class="paint-area paint-area--text">世界与中国大陆每百万架次航班事故率</h3>
+								<h3 class="paint-area paint-area--text">每百万架次航班发生事故数</h3>
 							</figcaption>
 						</figure>
 
 						<figure class="mockup-grid__item mockup">
 								<blockquote class="mockup-blockquote">
 										<p class="paint-area paint-area--text">
-											通过上图对比近40年来世界和中国每百万架航班发生事故的概率，
+											通过上图对比近40年来世界和中国每百万架航班发生事故的数量，
 											可以更加明显地看到80到95这15年时间内，大陆出现航空事故的概率高于世界平均。
 											虽然当时我国已经步入了改革开放的新时期，许多大型的客机投入使用，
 											可是机组人员的驾驶水平和航空公司的管理水平却没能跟上飞行事业的发展。
@@ -154,74 +241,81 @@
 											在飞行员试图降落时，这架飞机不幸与另一架客机相撞起火，128名乘客因此遇难。
 	
 											根据我们收集到的数据，随后的92到93年我国也陆续发生了13起劫机事件，所幸都没有造成人员伤亡。
-											但这一桩桩“人祸”，充分暴露出当时我国航空基础的薄弱与人员管理的混乱。					
-											
-										</br>
-										</br>			
-											彼时在国外旅客眼里，“中国航空”就是安全记录极差的代名词。
-											面对严峻的飞行安全、特别是民航安全状况，我国的航空公司和政府部门都开始了大刀阔斧的改革。
-											1996年《中华人民共和国民用航空法》的颁布实施，让我国民航正式走向正规、科学的管理。
-											而各地方航空公司逐渐也脱离民航管理局，开始了长达数年的兼并与重组。
-											2000年后，大陆形成了以南方航空集团，东方航空集团，中国国际航空三大航空集团并驾齐驱的良性竞争局面。
-								
-											航空安全的进步与积累也收到了成效，千禧年后我国发生航空事故的概率要远小于世界。
+											但这一桩桩“人祸”，充分暴露出当时我国航空基础的薄弱与人员管理的混乱，中国航空界的声誉也严重受损。
+											航空安全的警钟敲响，政府和航空公司迅速展开了一系列大刀阔斧的改革。
+											从1994年开始中国的航空事故率开始下降到稳定低于国际事故率水平，近几年来每百万次航班出现事故的数量甚至已降低到1以下。
 										</p>
-
-									</blockquote>
+										<p></p>
+								</blockquote>
 						</figure>
-							<br>
-							<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">
-								2000年以后我国航空界共发生了38起威胁飞行安全的事件。
+							
+							<h2 style="text-align: center; "class="mockup-heading mockup-heading--single paint-area paint-area--text">
+								2000年1月-2019年4月我国航空界共发生过38起威胁飞行安全的事件
 								<br>其中<font style="font-size: 35px;">57.9%</font>
 								的事故生还率为
 								<font style="font-size: 35px;">100%</font>。
 							</h2>
 							<figure class="mockup-grid__item mockup-width">
-									<figcaption style="height: 100px;"class="mockup-caption mockup-caption--box paint-area">
-									<h3 class="paint-area paint-area--text">航空事故生还率（2000年1月-2019年4月)</h3>
-									</figcaption>
+									
 								<div id="pic2_1",style="width: 400px; height:300px;" class="mockup-img"></div>
-	
 							</figure>
+							<blockquote class="mockup-blockquote">
+							<p class="paint-area paint-area--text"> 
+									进入21世纪以后，我国航空事故率控制在了一个较低的水平，发生过的大部分事故也没有造成人员伤亡。
+									我们试图从国际局势，航空技术，法律法规等方面来进一步分析我国航空安全状况好转的原因。
+									<BR>
+									<br>
+									(1)911事件的影响
+									<BR>2001年9月11日，美国本土受到了最为严重的恐怖袭击——“9.11事件”，遇难者总数高达2996人。此次事件对民众造成的心理影响极为深远,世界各国开始重视航空安全反恐领域，中国也在航空安全方面作出诸多应对举措。
+									<BR><BR>
+									(2)国际局势
+									<BR>911之后，美国出兵中东，目标主要为中东、阿拉伯等恐怖主义猖獗的国家。美国在战略关注和战略部署上“加强中央，收缩两翼”。“中央”即西亚、中东，“两翼”即欧洲和东亚。在阿拉伯极端分子和西方世界纷争的焦点之外。
+									<BR><BR>
+									(3)飞行驾驶安全的设计
+									<BR>1998年10月28日早晨，国航CA905次航班机长、正驾驶袁斌执行北京-昆明-仰光的航空任务并让自己的妻子坐进驾驶室。航班飞上天空，除了徐梅违反规定坐进驾驶舱外，一切正常，谁也不会想到，机长袁斌将把飞机劫持到台湾。
+									此次事件后我国严格把关飞行驾驶安全。现在所有的参与公共运输的民航客机都是按照双人制设计，飞行程序和分工也要求机长和副驾驶同时驾驶飞机。
+									随着科技的发展，飞机驾驶的导航精度、自动化程度不断提高，飞行驾驶越来越安全。								
+									<BR><BR>
+									(4)安检技术的升级
+									<BR>我国安检系统的成立过程一波三折。自1981年4月1日起，中国民航开始对国际航班实施安全检查，后逐步扩展到所有国内地区航班。安检体制也先后经历了由公安边防、武装警察到民航部门管理的过程。1991年11月6日，国务院正式批准民航机场安全检查由公安机关移交民航部门管理，并要求组建工作在5个月内完成，这标志着中国的安全检查工作从此由公安武警部门移交民航。民航接手安全检查工作后，引进多种安检设备，安检工作要求更加严格，管理更加规范化。
+									<BR><BR>
+									(5)法律法规的出台
+									<BR>中国民用航空安全检查规则于1999年5月14日中国民用航空总局局务会议通过，自1999年6月1日起施行。
+									2011年10月19日，十一届全国人大常委会第二十三次会议表决通过了《关于加强反恐怖工作有关问题的决定》。
+									2016年9月2日中华人民共和国交通运输部发布交通运输部令2016年第76号《民用航空安全检查规则》，发布了新版民用航空安全检查规则。
+									《中华人民共和国反恐怖主义法》已由中华人民共和国第十二届全国人民代表大会常务委员会第十八次会议于2015年12月27日通过，自2016年1月1日起施行。从1999以来，一系列有关反恐和航空安全条例的出台，为飞行安全提供了更强大的法律保障。
+									<BR><BR>
+									(6)民航机长的高素质训练
+									<BR>在我国，从一个完成基础飞行培训的学员成长为正式的机长，这期间要经历大概八个阶段，即跟机观察员、全程右座、第一阶段副驾驶、第二阶段副驾驶、第三阶段副驾驶、第四阶段副驾驶、左座副驾驶，然后才可以成为机长。
+									暂不提在航校经历的严格筛选和训练，一名从航校毕业的学员进入航空公司后成为跟机观察员，需要先飞不超过200个小时的实习。在这期间他只是观察，任何操作也不能进行。
+									之后，考察合格才能成为副驾驶，而副驾驶又分为A、B、C三种类别，仅C类又分为C1、C2、C3，通过一层层的晋级在飞行满2700个小时后（注：各航空公司规定各有不同），要接受航空公司、中国民航总局代表的联合考核。考核之后才能决定飞行员是否能够担任正驾驶，再由航空公司决定能不能成为机长。
+									
+							</p>
+							</blockquote>
 				</section>
 
 
 				<section class="mockup-section mockup-section--dark paint-area">
+					<h1 class="xiaobiaoti">
+								中国航空安全值得信赖
+					</h1>
 					<div class="mockup-content mockup-grid">
-						<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">结语</h2>
 						<div class="mockup-grid__item mockup-width">
 							<blockquote class="mockup-blockquote">
 							<p class="paint-area paint-area--text">
-							近几十年，我国航空从安全记录极差，到超越世界安全记录的平均安全水平，说明我国飞行安全取得了长足的进步。
-							中国航空在世界航空界的拥有了更高的话语权，这不是靠“好运气”得来的，每次航空事故背后都蕴藏着航空交通安全的进步的可能，
-							每一次行业性反思都出自全球民航人的共同目标：让飞行变得更安全。中国航空持续安全，离不开政府、各航空公司、机构和广大旅客的共同努力。
+									我国民航虽然起步发展较晚，但放眼世界，我国民航安全指数较高。百年来的航空安全事故中，事故量最多的是美国、俄罗斯。我国民航安全指数在大国之间较高。
+									我国民航发展的几十年来，历经风雨，由小到大，由弱到强，经受住了历史的洗礼和考验。其在捍卫空防安全，保障旅客生命财产以及航空器的安全方面，发挥了极其重要的作用。对于航空工作而言，其庞大的体系和特殊的性质决定了其安全的重要性。
+									在我国，安全科学将随着经济的全面发展，不可避免地会出现对机场和飞行安全设施需求的同步增长，但我国的航空事故率却在保持着低水平，高度安全性，这离不开航空人的努力。中国航空发展的辉煌成就蕴涵着一代代航空人所付出的艰辛努力，他们在特殊的岗位上为民航空防安全严格把关，过滤风险，化解危机，为中国民航事业的安全发展建功立业。
+									
 							</p>
 							</blockquote>
 						</div>
 					</div><!-- /mockup-grid -->
 				</section>
-
-				<section class="mockup-section mockup-section--dark paint-area">
-						<figure class="mockup-grid__item mockup-width--third">
-							<div class="mockup-pricing paint-area">
-								<h3 class="mockup-heading mockup-heading--box paint-area"><span>数据来源</span></h3>
-								<div class="mockup-bigtext">									
-										<font style="font-size: 18px">飞行安全网 : https://aviation-safety.net</font>
-										<Br><font style="font-size: 18px">世界银行 ：https://data.worldbank.org</font>
-									</div>
-								<div class="mockup-list-wrap paint-area">
-									<ul class="mockup-list paint-area paint-area--text">
-										<li style="font-size: 18px">指导老师：杨洸 汪翩翩</li>
-										
-									</ul>
-								</div>
-							</div>
-						</figure>
-					
-				</section>
+			
 			</div><!-- /mockup-browser -->
 		</div><!-- /content -->
-
+		<img style="width:100%;"src="appendix.png">
 	</div><!-- /container -->
 	<script src="map/js/world.js"></script>
 	<script src="pic1.js"></script>
@@ -234,9 +328,10 @@
 			window.addEventListener("resize", function () {
 			myChart1.resize();
 			myChart2_1.resize();
-			myChart2_2.resize();
 			myChart_map.resize();
 			myChart3_2.resize();
+			myChart50s.resize();
+			myChart90s.resize();
 			
 		});
 	</script>

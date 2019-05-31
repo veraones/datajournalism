@@ -3,7 +3,7 @@
 .clearfix:after { clear: both; }
 
 body {
-	background: #525252;
+	background: #ffffff;
 	color: #fff;
 	font-weight: 500;
 	font-size: 1em;
@@ -32,6 +32,183 @@ button:focus {
 }
 
 
+#header_title_one
+{
+  margin: auto;  
+  position: absolute;  
+  left: 0; bottom: 0; right: 0;  
+  top: 32%;
+  z-index: 1;
+  color:white;
+  font-size:5.5em;
+  font-family: sans-serif;
+  text-align:center;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+#header_title_two
+{
+	margin: auto;  
+	position: absolute;  
+	left: 0; bottom: 0; right: 0;  
+	top: 55%;
+	z-index: 1;
+	color:white;
+	font-size:2em;
+	font-family: sans-serif;
+	text-align:center;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+
+
+#scroller1 {
+	margin: auto;  
+	position: absolute;  
+	left: 0; bottom: 0; right: 0;  
+	top: 62%;
+	z-index: 1;
+	background: #333 url(arrow.svg) repeat-y;
+	background-size: cover;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	margin-top: 50px;
+	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	opacity: 80%;
+}
+
+#scroller2 {
+	margin: auto;  
+	position: absolute;  
+	left: 0; bottom: 0; right: 0; 
+	top: 70%; 
+	z-index: 1;
+	background: #333 url(arrow.svg) repeat-y;
+	background-size: cover;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	margin-top: 50px;
+	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	opacity: 80%;
+}
+
+#scroller3 {
+	margin: auto;  
+	position: absolute;  
+	left: 0; bottom: 0; right: 0; 
+	top: 70%;
+	z-index: 1;
+	background: #333 url(arrow.svg) repeat-y;
+	background-size: cover;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	margin-top: 50px;
+	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	opacity: 80%;
+}
+#scroller4 {
+	margin: auto;  
+	position: absolute;  
+	left: 0; bottom: 0; right: 0; 
+	top: 70%;
+	z-index: 1;
+	background: #333 url(arrow.svg) repeat-y;
+	background-size: cover;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	margin-top: 50px;
+	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	opacity: 80%;
+}
+#scroller5 {
+	margin: auto;  
+	position: absolute;  
+	left: 0; bottom: 0; right: 0; 
+	top: 70%;
+	z-index: 1;
+	background: #333 url(arrow.svg) repeat-y;
+	background-size: cover;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	margin-top: 50px;
+	-webkit-animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation: scrolling 1.5s 4s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	opacity: 80%;
+}
+
+@keyframes scrolling
+{
+0%   {background-position-y: 0px;}
+50%  {background-position-y: 50px;}
+100% {background-position-y: 50px;}
+}
+
+@-webkit-keyframes scrolling /*Safari and Chrome*/
+{
+0%   {background-position-y: 0px;}
+50%  {background-position-y: 50px;}
+100% {background-position-y: 50px;}
+}
+
+.header_word{
+	margin: auto;  
+	left: 0; right: 0; 
+	top:28%; 
+	display: none;
+	position: absolute;
+	text-align: center;
+	z-index:2;
+    background: rgba(255, 255, 255, .8);
+	width: calc(100% - 80px);
+	height: 250px;
+    max-width: 620px;
+	padding: 20px;
+	color:#333;
+
+}
+.header_pic{
+	background-size: cover;
+	text-align: center;
+	position:relative; 
+	height: 100vh;width: 100%;
+	background-size: cover
+}
+.header_bg{
+	background-size: cover;
+	text-align: center;
+	position:relative; 
+	height: 100vh;width: 100%;
+	background-size: cover;
+	-webkit-filter: brightness(0.50);
+	filter: brightness(0.50);
+}
+
+#pics p{
+	font-size: 30px;
+	text-align: center;
+}
+
+.vedio{
+	height: 100vh;
+	width: 100%;
+	object-fit: none;
+
+}
+
 /* Content */
 .content {
 	padding: 0 40px 100px;
@@ -43,29 +220,16 @@ button:focus {
 	max-width: 1300px;
 	margin: 0 auto;
 	background: #fff;
-	border-top: 30px solid #ACADAE;
-	border-bottom: 20px solid #ACADAE;
-	border-radius: 10px;
 	color: rgb(83, 83, 85);
-	-webkit-touch-callout: none;
+	 /*-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
+	user-select: none;*/
 }
 
-.mockup-browser::before {
-	content: '';
-	position: absolute;
-	top: -20px;
-	left: 15px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: #fdb0ad;
-	box-shadow: 20px 0 0 #fdeaa2, 40px 0 0 #d7edb4;
-}
+
 
 .mockup-header {
 	padding: 2em 0;
@@ -96,18 +260,18 @@ button:focus {
 }
 
 .mockup-section {
-	padding: 80px 0;
+	padding: 30px 0;
 	min-height: 400px;
 }
 
 .mockup-section--dark {
-	background: #f4f4f4;
+	background: #ffffff;
 }
 
 .mockup-content {
-	max-width: 1100px;
+	max-width: 90%;
 	margin: 0 auto;
-	padding: 0 2em;
+	padding: 0 0;
 }
 
 .mockup-grid {
@@ -128,13 +292,20 @@ button:focus {
 }
 
 .mockup-heading__subline {
+	z-index: 2;
 	display: block;
 	font-size: 45%;
 	margin: 25px 0 15px;
 }
 
+.xiaobiaoti{
+	margin:0;
+	font-size: 3.2em;
+	text-align: center;
+}
+
 .mockup-heading--single {
-	padding: 0 20px 1.5em;
+	padding: 0 0px 1.5em;
 }
 
 .mockup-heading--box {
@@ -148,6 +319,7 @@ button:focus {
 }
 
 .mockup-heading--large {
+	z-index: 1;
 	font-size: 3.5em;
 }
 
@@ -156,7 +328,7 @@ button:focus {
 	float: left;
 	width: 100%;
 	margin: 0 0 30px;
-	padding: 0 20px;
+	padding: 0 10px;
 }
 
 .mockup-blockquote {
@@ -212,12 +384,12 @@ button:focus {
 }
 
 .mockup-img {
-	background: rgba(0,0,0,0.08);
+	background: #ffffff;
 	text-align: center;
 	line-height: 200px;
 	height: 500px;
 	font-size: 40px;
-	color: rgba(0, 0, 0, 0.1);
+	color: #ffffff;
 }
 
 .mockup-img--large {
@@ -236,13 +408,13 @@ button:focus {
 }
 
 .mockup-caption--box  h3 {
-	background: rgba(181, 183, 188, 0.5);
+	background: #ffffff;
 	padding: 10px 20px 10px 20px;
 	text-align: center;
 }
 
 .mockup-caption--box {
-	background: #f0f0f0;
+	background: #ffffff;
 	padding: 20px 80px 30px 80px;
 }
 
@@ -702,7 +874,7 @@ button:focus {
 		padding: 40px 0;
 	}
 	.mockup-content {
-		padding: 0 10px;
+		padding: 0 0px;
 	}
 	.mockup-width--forth,
 	.mockup-width--half {
