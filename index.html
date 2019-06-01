@@ -39,6 +39,11 @@
 		})
 
 		$('#scroller4').on('click',function(event){
+			var pic4 = $('#header_pics4').offset().top;
+			$('html,body').animate({scrollTop: pic4 + 'px'}, 800);
+			$('#header_word4').fadeIn(2600);
+		})
+		$('#scroller5').on('click',function(event){
 			var pic5 = $('#neirong').offset().top;
 			$('html,body').animate({scrollTop: pic5 + 'px'}, 800);
 		})
@@ -50,45 +55,56 @@
 	
 	<div class="container">
 
-		<div style="height: 99vh;width: 100%;position:relative;background:linear-gradient(#132358,#6f7a8f,#132358)">
+		<div calss="header_bg" style="background-image:url(file.jpg); height: 100vh;width: 100%;position:relative;background-size:cover;">
 				<p id="header_title_one" >
 						<img  src="title.png">
 				</p>			
 
-				<div id="scroller1" title="Scroll Down"></div>
+				<div id="scroller1" title="Scroll Down"><p style="position:relative; top:100%;text-align: center;font-size: 1em;">点击下滑</p></div>
+				
 		</div>
 
 
 		<div id="pics">
-			<div class="header_pic" >
-				<div class="header_word" id="header_word1">
-					<h1>5月8日 | 06:30</h1>
-					<p style="font-size: 1.2em;">孟加拉航空一架客机在缅甸仰光国际机场21跑道着陆时冲出跑道，机身“断成三截”。
-							包括机组人员在内的多人受伤，机长头部受伤。</p>
+				<div class="header_pic" >
+					<div class="header_word" id="header_word1">
+						<h1>5月8日 | 06:30</h1>
+						<p style="font-size: 1.2em;">孟加拉航空一架客机在缅甸仰光国际机场21跑道着陆时冲出跑道，机身“断成三截”。
+								包括机组人员在内的多人受伤，机长头部受伤。</p>
+					</div>
+					<div class="header_bg" style="background-image:url(mengjiala.jpg);"id="header_pics1"></div>
+					<div id="scroller2" title="Scroll Down"></div>
 				</div>
-				<div class="header_bg" style="background-image:url(mengjiala.jpg);"id="header_pics1"></div>
-				<div id="scroller2" title="Scroll Down"></div>
+	
+				<div class="header_pic">
+					<div class="header_word" id="header_word2">
+						<h1>5月5日</h1>
+						<p style="font-size: 1.2em;">俄罗斯航空一架客机从莫斯科机场起飞后失火，在起飞机场紧急迫降，造成至少41人死亡。
+							墨西哥发生一起造成14人死亡的航空事故，遇难者包括11名乘客和3名机组人员。</p>
+					</div>
+					<div class="header_bg" style="background-image:url(eluosi.jpg);"  id="header_pics2"></div>
+					<div id="scroller3" title="Scroll Down"></div>
+				</div>
+	
+				<div class="header_pic">
+					<div class="header_word" id="header_word3">
+						<h1>3月10日 | 08:45</h1>
+						<p style="font-size: 1.2em;">埃塞俄比亚航空的一架客机起飞不久后坠毁，机上149名乘客和8名机组成员无一生还，其中包括8位中国公民。</p>
+					</div>
+					<div class="header_bg" style="background-image:url(aiji.jpg);" id="header_pics3"></div>
+					<div id="scroller4" title="Scroll Down"></div>
+				</div>
 			</div>
-
+	
 			<div class="header_pic">
-				<div class="header_word" id="header_word2">
-					<h1>5月5日</h1>
-					<p style="font-size: 1.2em;">俄罗斯航空一架客机从莫斯科机场起飞后失火，在起飞机场紧急迫降，造成至少41人死亡。
-						墨西哥发生一起造成14人死亡的航空事故，遇难者包括11名乘客和3名机组人员。</p>
+					<div class="header_word" id="header_word4">
+						<h1>1月14日 | 08:30</h1>
+						<p style="font-size: 1.2em;">伊朗发生坠机事件，两名机组人员幸存，10人下落不明。</p>
+					</div>
+					<div class="header_bg" style="background-image:url(yilang.jpg);" id="header_pics4"></div>
+					<div id="scroller5" title="Scroll Down"></div>
 				</div>
-				<div class="header_bg" style="background-image:url(eluosi.jpg);"  id="header_pics2"></div>
-				<div id="scroller3" title="Scroll Down"></div>
 			</div>
-
-			<div class="header_pic">
-				<div class="header_word" id="header_word3">
-					<h1>3月10日 | 08:45</h1>
-					<p style="font-size: 1.2em;">埃塞俄比亚航空的一架客机起飞不久后坠毁，机上149名乘客和8名机组成员无一生还，其中包括8位中国公民。</p>
-				</div>
-				<div class="header_bg" style="background-image:url(aiji.jpg);" id="header_pics3"></div>
-				<div id="scroller4" title="Scroll Down"></div>
-			</div>
-		</div>
 
 		
 		<div id="neirong" class="content">	

@@ -73,7 +73,7 @@ button:focus {
 	left: 0; bottom: 0; right: 0;  
 	top: 62%;
 	z-index: 1;
-	background: rgb(255,255,255,0.3)url(arrow.svg) repeat-y;
+	background: rgba(255, 255, 255, 0.3)url(arrow.svg) repeat-y;
 	background-size: cover;
 	cursor: pointer;
 	width:4.5rem;
@@ -187,7 +187,6 @@ button:focus {
 	text-align: center;
 	position:relative; 
 	height: 100vh;width: 100%;
-	background-size: cover;
 	-webkit-filter: brightness(0.50);
 	filter: brightness(0.50);
 }
